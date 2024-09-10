@@ -32,6 +32,7 @@
 ## Operadores
 -{x} Operadores de atribuição de valor (=)
 -{x} operador de contatenação (é o operador de junção de duas ou mais strings)
+-{x} operadores de comparação : (1==2), (1!=2)
 
 ## Estrutura de dados
 
@@ -55,3 +56,12 @@
 
 # Condicionais
 -{x} switch (para usar caso)
+-{x} if/else
+
+## Módulos em node.js:
+
+-{x} importação de módulos (require, commonJS)
+-{x} Biblioteca 'inquirer' para criar prompts interativos
+
+## Programação assíncrona e Promisses:
+- {x} Uso de funções assíncronas (async/await(esperar))
