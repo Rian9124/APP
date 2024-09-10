@@ -5,43 +5,47 @@
 
 
 ## Peças de uma linguagem
-- [x] (// em js)Comentários
-- Declarações de variáveis (const, let)
-- Operadores (atribuição, concatenação, matemáticos, lógicos)
-- Tipos de dados (string, number, bolean)
-- Estrutura de dados (Functions, object, array)
-- Controle de fluxo (if/else if/ else)
-- Estrutura de repetição (for, while)
+- {x} (// em js)Comentários
+- {x} Declarações de variáveis (const, let)
+- {x} Operadores (atribuição, concatenação, matemáticos, lógicos)
+- {x} Tipos de dados (string, number, bolean)
+- {x} Estrutura de dados (Functions, object, array)
+- {x} Controle de fluxo (if/else if/ else)
+- {x} Estrutura de repetição (for, while)
 
 ## Fases da resolução de um problema 
 
-Coletar os dados
-Processar os dados (manipular,alterar ...)
-Apresentar os dados
+-{x} Coletar os dados
+-{x} Processar os dados (manipular,alterar ...)
+-{x} Apresentar os dados
 
 ## Escopo e variáveis
-Variáveis globais e locais (variaveis globais são variaveis que estao fora de chaves, o que representa que se caso você chame ela antes de agrupamentos com chaves ela e executada primeiro que outra variavel que está em um agrupamento utilizados por chaves)
+-{x} Variáveis globais e locais (variaveis globais são variaveis que estao fora de chaves, o que representa que se caso você chame ela antes de agrupamentos com chaves ela e executada primeiro que outra variavel que está em um agrupamento utilizados por chaves)
 
-Agrupamentos (São espaços criados como grupos, o que está entre ({}) automaticamente se tornar parte do agrupamento)
+-{x} Agrupamentos (São espaços criados como grupos, o que está entre ({}) automaticamente se tornar parte do agrupamento)
 
 ## Tipos de dados 
 
-string (textos); "" '' ``
-nunber (número); 1 2 3 4
-function (uma caixa com instruções dentro onde você pode chamar as instruções apartir do nome da função que ela está)
-
+-{x} string (textos); "" '' ``
+-{x} nunber (número); 1 2 3 4
 
 ## Operadores
-Operadores de atribuição de valor (=)
-operador de contatenação (é o operador de junção de duas ou mais strings)
+-{x} Operadores de atribuição de valor (=)
+-{x} operador de contatenação (é o operador de junção de duas ou mais strings)
 
 ## Estrutura de dados
 
 ### Arrays 
-uma lista que contem qualquer tipos de dados 
+-{x} uma lista que contem qualquer tipos de dados 
 
 ### objetos
 
-Atributos e métodos
-Criação e manipulação de objetos
-Acesso a propriedades de objetos
+-{x} Atributos e métodos
+-{x} Criação e manipulação de objetos
+-{x} Acesso a propriedades de objetos
+
+### function
+-{x} function (uma caixa com instruções dentro onde você pode chamar as instruções apartir do nome da função que ela está)
+-{x} criar, passar argumentos
+-{x} executar
+-{x} arrow function / named function
