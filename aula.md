@@ -52,3 +52,6 @@
 
 ### Estrutura de repetição 
 -{x} white (enquanto)
+
+# Condicionais
+-{x} switch (para usar caso)
