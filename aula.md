@@ -48,4 +48,7 @@
 -{x} function (uma caixa com instruções dentro onde você pode chamar as instruções apartir do nome da função que ela está)
 -{x} criar, passar argumentos
 -{x} executar
--{x} arrow function / named function
+-{x} arrow function / named 
+
+### Estrutura de repetição 
+-{x} white (enquanto)
