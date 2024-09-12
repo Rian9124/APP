@@ -1,7 +1,7 @@
-# Criação do arquivo README.md com o conteúdo solicitado
+# Apresentação visual
+![Apresentação visual](Gif-Readme/Readmi-teste.gif)
 
-conteudo = """
-# 📝 App de Metas - CLI
+# 📝 App de Metas - (MetaMaster)
 
 **Bem-vindo ao App de Metas**, um gerenciador de tarefas simples e interativo para a linha de comando, projetado para ajudá-lo a organizar suas metas de maneira prática e eficiente! 🎯
 
@@ -22,17 +22,17 @@ conteudo = """
   - Pressione **espaço** para marcar/desmarcar metas.
   - Pressione **Enter** para concluir ações.
 
-3. Menu Interativo:
+## 3. Menu Interativo:
 Ao iniciar o app, você será saudado com uma mensagem de boas-vindas e verá o menu principal com as opções:
 
-Cadastrar meta
-Listar Metas
-Metas Abertas
-Metas Realizadas
-Apagar Meta
-Sair
+- Cadastrar meta
+- Listar Metas
+- Metas Abertas
+- Metas Realizadas
+-Apagar Meta
+- Sair
 
-4. Gerencie suas Metas:
+## 4. Gerencie suas Metas:
 Cadastre novas metas, visualize suas metas atuais, marque as concluídas e exclua as que não são mais possíveis.
 
 
@@ -43,3 +43,10 @@ As metas são salvas automaticamente no arquivo metas.jsonno formato JSON. Você
 Node.js : Plataforma JavaScript para construir o aplicativo.
 Inquirer : Biblioteca usada para criar a interface de linha de comando interativa.
 FS (File System) : Para salvar e carregar as metas no arquivo metas.json.
+
+📂 Estrutura do Projeto
+├── app-de-metas/
+│   ├── index.js         # Arquivo principal do App
+│   ├── metas.json       # Armazena suas metas
+└── README.md            # Documentação do App
+
