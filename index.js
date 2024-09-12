@@ -4,12 +4,12 @@ const { select, input, checkbox } = require('@inquirer/prompts');
 let metas = []
 
 async function cadastrarMeta() {
-    const meta = await input({message:"Digite a meta"})
+    const meta = await input({message:"Digite a meta: "})
     if(meta.length == 0){
         console.log(' A meta não pode ser vazia.')
         return cadastrarMeta()
     }else if(meta.length <= 3){
-        console.log(' A meta não pode ser menor que 5 caracteres.')
+        console.log(' A meta não pode conter menos de 3 caracteres.')
         return cadastrarMeta()
     }
     metas.push(
@@ -24,7 +24,7 @@ async function listarMetas(){
         return
     }
     const respostas = await checkbox({
-        message:"use as setas para mudar de meta, o espaço para marcar ou desmarcar e o  Enter para finalizar essa etapa ",
+        message:"use as (setas) para mudar de meta, o (espaço) para marcar ou desmarcar e o (Enter) para finalizar essa etapa ",
         choices:[...metas],
         instructions:false,
     })
@@ -67,7 +67,7 @@ async function metasRealizadas() {
         return
     }
     await select({
-        message:"Metas Realizadas "+ realizadas.length,
+        message:"Metas Realizadas: "+ realizadas.length,
         choices:[...realizadas]
     })
 }
