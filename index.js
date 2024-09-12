@@ -1,6 +1,8 @@
 // nessa variavel eu estou inportando do pacote inquirer uma pasta e dentro da pasta eu peguei um arquivo especifico que e um objeto chamado {select}
 const { select, input, checkbox } = require('@inquirer/prompts');
 
+let mensagem= "   Bem vindo ao app de metas";
+let mensagem1;
 let metas = []
 
 async function cadastrarMeta() {
@@ -16,6 +18,7 @@ async function cadastrarMeta() {
         { value: meta, checked:false}
 
     )
+    mensagem = " Meta cadastrada com sucesso! :)"
 }
 
 async function listarMetas(){
@@ -49,7 +52,7 @@ async function metasAbertas(){
         return meta.checked != true
     })
     if(Abertas.length == 0){
-       console.log("nenhuma meta está aberta! :)")
+       mensagem = "  Nenhuma meta está aberta! :)"
        return  
     }
     await select ({
@@ -63,7 +66,7 @@ async function metasRealizadas() {
         return meta.checked
     })
     if (realizadas.length == 0){
-        console.log("Não existe metas realizadas :(")
+        mensagem = "  Não existe metas realizadas :("
         return
     }
     await select({
@@ -73,7 +76,7 @@ async function metasRealizadas() {
 }
 async function deletarMeta(){
     if(metas.length == 0){
-        console.log("Não existe nenhuma meta no momento")
+        mensagem = "Não existe nenhuma meta no momento"
         return
     }
 
@@ -94,16 +97,29 @@ async function deletarMeta(){
             return meta.value != item
         })
     })
-    console.log("Metas(s) deleta(s) com sucesso!")
+    mensagem = "Metas(s) deleta(s) com sucesso!"
+}
+
+function mostrarMensagem(){
+    console.clear();
+    if(mensagem != ""){
+        console.log("")
+        console.log(mensagem1)
+        console.log(mensagem)
+        console.log(mensagem1)
+        console.log("")
+        mensagem = ""
+    }
 }
 
 // inicio a função / o async me permite utilizar o (await / esperar) na função
 async function start () {
     console.log("")
-    console.log("|---------------------------|")
+    mensagem1 = "|-----------------------------|"
     
     // crio a estrutura de repetição (enquanto)
     while (true) {
+        mostrarMensagem()
         // crio uma variavel opção que espera o usuario escolher qual item da lista quer e guarda a opção escolhida
         const opcao = await select({
             message: "Menu >",
@@ -163,7 +179,7 @@ async function start () {
             return
         }
         console.log("")
-        console.log("|---------------------------|")
+    mensagem1 = "|-----------------------------|"
 }
 }
 start()
