@@ -1,6 +1,7 @@
 # Apresentação visual
-<img src="Gif-Readme/Readmi-teste.gif" alt="Apresentação visual" width="300"/>
-
+<div align="center">
+  <img src="Gif-Readme/Readmi-teste.gif" alt="Apresentação visual" width="400"/>
+</div>
 # 📝 App de Metas - (MetaMaster)
 
 **Bem-vindo ao App de Metas**, um gerenciador de tarefas simples e interativo para a linha de comando, projetado para ajudá-lo a organizar suas metas de maneira prática e eficiente! 🎯
@@ -45,8 +46,8 @@ As metas são salvas automaticamente no arquivo metas.jsonno formato JSON. Você
 - FS (File System) : Para salvar e carregar as metas no arquivo metas.json.
 
 ## 📂 Estrutura do Projeto
-├── app-de-metas/
-│   ├── index.js         # Arquivo principal do App
-│   ├── metas.json       # Armazena suas metas
-└── README.md            # Documentação do App
+├── app-de-metas/<br>
+│   ├── index.js         # Arquivo principal do App<br>
+│   ├── metas.json       # Armazena suas metas<br>
+└── README.md            # Documentação do App<br>
 
