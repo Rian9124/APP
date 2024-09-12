@@ -36,15 +36,15 @@ Ao iniciar o app, você será saudado com uma mensagem de boas-vindas e verá o 
 Cadastre novas metas, visualize suas metas atuais, marque as concluídas e exclua as que não são mais possíveis.
 
 
-##5. Arquivo de Metas:
+## 5. Arquivo de Metas:
 As metas são salvas automaticamente no arquivo metas.jsonno formato JSON. Você pode ver e editar esse arquivo manualmente, se necessário.
 
-##🛠 Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 - Node.js : Plataforma JavaScript para construir o aplicativo.
 - Inquirer : Biblioteca usada para criar a interface de linha de comando interativa.
 - FS (File System) : Para salvar e carregar as metas no arquivo metas.json.
 
-##📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 ├── app-de-metas/
 │   ├── index.js         # Arquivo principal do App
 │   ├── metas.json       # Armazena suas metas
