@@ -8,7 +8,7 @@ async function cadastrarMeta() {
     if(meta.length == 0){
         console.log(' A meta não pode ser vazia.')
         return cadastrarMeta()
-    }else if(meta.length <= 5){
+    }else if(meta.length <= 3){
         console.log(' A meta não pode ser menor que 5 caracteres.')
         return cadastrarMeta()
     }
@@ -71,9 +71,36 @@ async function metasRealizadas() {
         choices:[...realizadas]
     })
 }
+async function deletarMeta(){
+    if(metas.length == 0){
+        console.log("Não existe nenhuma meta no momento")
+        return
+    }
+
+    const metasDesmarcadas= metas.map((meta)=>{
+        return {value: meta.value, checked: false}
+    })
+    const itensDeletar = await checkbox({
+        message:"Selecione uma meta para deletar",
+        choices:[...metasDesmarcadas],
+        instructions:false,
+    }) 
+    if(itensDeletar.length == 0){
+        console.log("Nenhum item a deletar! ")
+        return
+    }
+    itensDeletar.forEach((item)=>{
+        metas = metas.filter((meta)=>{
+            return meta.value != item
+        })
+    })
+    console.log("Metas(s) deleta(s) com sucesso!")
+}
 
 // inicio a função / o async me permite utilizar o (await / esperar) na função
 async function start () {
+    console.log("")
+    console.log("|---------------------------|")
     
     // crio a estrutura de repetição (enquanto)
     while (true) {
@@ -96,6 +123,10 @@ async function start () {
                 {
                     name: "Metas Realizadas",
                     value:"Realizadas"
+                },
+                {
+                    name: "Deletar Meta",
+                    value:"deletar"
                 },
                 {
                     name:"Sair",
@@ -122,11 +153,17 @@ async function start () {
         case "Realizadas":
             await metasRealizadas()
             break
+        // caso
+        case "deletar":
+            await deletarMeta()
+            break
         // caso para sair com a variavel sair e o return para parar a estrutura de repetição
         case "sair":
             console.log("Nós vemos na próxima")
             return
-    }
+        }
+        console.log("")
+        console.log("|---------------------------|")
 }
 }
 start()
