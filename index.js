@@ -40,6 +40,20 @@ async function listarMetas(){
     console.log('Meta(s) concluídas')
 }
 
+async function metasRealizadas() {
+    const realizadas= metas.filter((meta)=>{
+        return meta.checked
+    })
+    if (realizadas.length == 0){
+        console.log("Não existe metas realizadas :(")
+        return
+    }
+    await select({
+        message:"Metas Realizadas",
+        choices:[...realizadas]
+    })
+}
+
 // inicio a função / o async me permite utilizar o (await / esperar) na função
 async function start () {
     
@@ -58,6 +72,10 @@ async function start () {
                     value:"listarMetas"
                 },
                 {
+                    name: "Metas Realizadas",
+                    value:"Realizadas"
+                },
+                {
                     name:"Sair",
                     value:"sair"
                     }
@@ -74,9 +92,12 @@ async function start () {
         case "listarMetas":
             await listarMetas()
             break
+        case "Realizadas":
+            await metasRealizadas()
+            break
         // caso para sair com a variavel sair e o return para parar a estrutura de repetição
         case "sair":
-            console.log("Nós vemos mais tarde")
+            console.log("Nós vemos na próxima")
             return
     }
 }

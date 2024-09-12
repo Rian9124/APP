@@ -33,11 +33,13 @@
 -{x} Operadores de atribuição de valor (=)
 -{x} operador de contatenação (é o operador de junção de duas ou mais strings)
 -{x} operadores de comparação : (1==2), (1!=2)
+-{x} spread operator: ...
 
 ## Estrutura de dados
 
-### Arrays 
+### Arrays (toda arrays e um objeto)
 -{x} uma lista que contem qualquer tipos de dados 
+-{x} métodos de array: [push,find, forEach]: HOF (Higher Order Functions)
 
 ### objetos
 
