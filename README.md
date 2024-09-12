@@ -2,6 +2,7 @@
 <div align="center">
   <img src="Gif-Readme/Apresentação-visual.gif" alt="Apresentação visual" width="400"/>
 </div>
+
 # 📝 App de Metas - (MetaMaster)
 
 **Bem-vindo ao App de Metas**, um gerenciador de tarefas simples e interativo para a linha de comando, projetado para ajudá-lo a organizar suas metas de maneira prática e eficiente! 🎯
