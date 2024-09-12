@@ -1,9 +1,24 @@
 // nessa variavel eu estou inportando do pacote inquirer uma pasta e dentro da pasta eu peguei um arquivo especifico que e um objeto chamado {select}
 const { select, input, checkbox } = require('@inquirer/prompts');
+const fs = require ("fs").promises
 
 let mensagem= "   Bem vindo ao app de metas";
 let mensagem1;
 let metas = []
+
+async function carregarMetas(){
+    try{
+        const dados = await fs.readFile("metas.json","utf-8")
+        metas = JSON.parse(dados)
+    }
+    catch(erro){
+        metas = []
+    }
+}
+
+async function salvarMetas() {
+    await fs.writeFile("metas.json", JSON.stringify(metas, null,2))
+}
 
 async function cadastrarMeta() {
     const meta = await input({message:"Digite a meta: "})
@@ -116,7 +131,7 @@ function mostrarMensagem(){
 async function start () {
     console.log("")
     mensagem1 = "|-----------------------------|"
-    
+    await carregarMetas()
     // crio a estrutura de repetição (enquanto)
     while (true) {
         mostrarMensagem()
@@ -156,10 +171,12 @@ async function start () {
         case "cadastrarMeta":
             await cadastrarMeta()
             console.log(metas)
+            await salvarMetas()
             break
         // caso
         case "listarMetas":
             await listarMetas()
+            await salvarMetas()
             break
         // caso
         case "Abertas":
@@ -172,6 +189,7 @@ async function start () {
         // caso
         case "deletar":
             await deletarMeta()
+            await salvarMetas()
             break
         // caso para sair com a variavel sair e o return para parar a estrutura de repetição
         case "sair":
