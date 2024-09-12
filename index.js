@@ -19,6 +19,10 @@ async function cadastrarMeta() {
 }
 
 async function listarMetas(){
+    if(metas.length == 0){
+        console.log("Não existe nenhuma meta no momento")
+        return
+    }
     const respostas = await checkbox({
         message:"use as setas para mudar de meta, o espaço para marcar ou desmarcar e o  Enter para finalizar essa etapa ",
         choices:[...metas],
@@ -40,6 +44,20 @@ async function listarMetas(){
     console.log('Meta(s) concluídas')
 }
 
+async function metasAbertas(){
+    const Abertas = metas.filter((meta)=>{
+        return meta.checked != true
+    })
+    if(Abertas.length == 0){
+       console.log("nenhuma meta está aberta! :)")
+       return  
+    }
+    await select ({
+        message:"Metas Abertas",
+        choices:[...Abertas]
+    })
+}
+
 async function metasRealizadas() {
     const realizadas= metas.filter((meta)=>{
         return meta.checked
@@ -49,7 +67,7 @@ async function metasRealizadas() {
         return
     }
     await select({
-        message:"Metas Realizadas",
+        message:"Metas Realizadas "+ realizadas.length,
         choices:[...realizadas]
     })
 }
@@ -72,6 +90,10 @@ async function start () {
                     value:"listarMetas"
                 },
                 {
+                    name: "Metas Abertas",
+                    value:"Abertas"
+                },
+                {
                     name: "Metas Realizadas",
                     value:"Realizadas"
                 },
@@ -92,6 +114,11 @@ async function start () {
         case "listarMetas":
             await listarMetas()
             break
+        // caso
+        case "Abertas":
+            await metasAbertas()
+            break
+        // caso
         case "Realizadas":
             await metasRealizadas()
             break
