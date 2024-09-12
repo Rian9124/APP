@@ -1,6 +1,6 @@
 # Apresentação visual
 <div align="center">
-  <img src=Gif-Readme/Apresentação-visual.gif" alt="Apresentação visual" width="400"/>
+  <img src="Gif-Readme/Apresentação-visual.gif" alt="Apresentação visual" width="400"/>
 </div>
 # 📝 App de Metas - (MetaMaster)
 
